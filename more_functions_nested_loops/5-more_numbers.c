@@ -28,7 +28,6 @@ void more_numbers(void)
 			if (d > 9)
 				_putchar('0' + (d % 10));
 		}
+		_putchar('\n');
 	}
-
-	_putchar('\n');
 }
