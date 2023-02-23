@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * main - prints the numbers from 1 to 100 / multiplies of 3 & 5 prints Fizz & Buzz
- * @i: number to be checked
+ * main - prints the numbers from 1 to 100, multiplies prints Fizz & Buzz
+ *
  * Return: 0 if success
  */
 
