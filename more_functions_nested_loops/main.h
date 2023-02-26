@@ -31,3 +31,6 @@ void print_square(int size);
 
 /* Task 10 - Triangles */
 void print_triangle(int size);
+
+/* Task 12 - Numbers have life; they're not just symbols on paper */
+void print_number(int n);
