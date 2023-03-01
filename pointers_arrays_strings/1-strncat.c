@@ -2,7 +2,7 @@
 
 /**
  * _strncat - concatenates two strings
- * @dest: string to concatenate to  
+ * @dest: string to concatenate to
  * @src: input string
  * @n: number of elements to concatenate in
  * Return: pointer to the dest value
@@ -17,6 +17,6 @@ char *_strncat(char *dest, char *src, int n)
 
 	for (c = 0; src[c] && n > 0; c++, n--, i++)
 		dest[i] = src[c];
-	
+
 	return (dest);
 }
