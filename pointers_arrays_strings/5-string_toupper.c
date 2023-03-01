@@ -14,7 +14,7 @@ char *string_toupper(char *s)
 	{
 		if (s[i] >= 97 && s[i] <= 122) /* char lowercase ASCII */
 		{
-			s[i] -= 32; /* */ 
+			s[i] -= 32; /* move to uppercase ASCII */ 
 		}
 	}
 
