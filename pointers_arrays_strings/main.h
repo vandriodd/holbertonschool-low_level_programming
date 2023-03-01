@@ -53,7 +53,7 @@ int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 
 /* Task 5 - Always look up */
-char *string_toupper(char *);
+char *string_toupper(char *s);
 
 /* Task 6 - Expect the best. Prepare for the worst. Capitalize on what comes */
 char *cap_string(char *);
