@@ -23,7 +23,8 @@ char *cap_string(char *c)
 		{
 			if (c[i] == sp[n])
 			{
-				if (c[i + 1] >= 97 && c[i + 1] <= 122) /* changes the next char after the separator into uppercase */
+				/* changes the next char after the separator into uppercase */
+				if (c[i + 1] >= 97 && c[i + 1] <= 122)
 				{
 					c[i + 1] -= 32;
 					break;
