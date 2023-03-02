@@ -59,4 +59,30 @@ char *string_toupper(char *s);
 char *cap_string(char *);
 
 /* Task 7 - Mozart composed his music not for the elite, but for everybody */
-char *leet(char *);
+char *leet(char *c);
+
+/* >> 3rd Project << */
+
+/* Task 0 - memset */
+char *_memset(char *s, char b, unsigned int n);
+
+/* Task 1 - memcpy */
+char *_memcpy(char *dest, char *src, unsigned int n);
+
+/* Task 2 - strchr */
+char *_strchr(char *s, char c);
+
+/* Task 3 - strspn */
+unsigned int _strspn(char *s, char *accept);
+
+/* Task 4 - strpbrk */
+char *_strpbrk(char *s, char *accept);
+
+/* Task 5 - strstr */
+char *strstr(char *haystack, char *needle);
+
+/* Task 6 - Chess is mental torture */
+void print_chessboard(char (*a)[8]);
+
+/* Task 7 - The line of life is ragged diagonal between duty and desire */
+void print_diagsums(int *a, int size);
