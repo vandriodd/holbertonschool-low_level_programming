@@ -79,7 +79,7 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 
 /* Task 5 - strstr */
-char *strstr(char *haystack, char *needle);
+char *_strstr(char *haystack, char *needle);
 
 /* Task 6 - Chess is mental torture */
 void print_chessboard(char (*a)[8]);
