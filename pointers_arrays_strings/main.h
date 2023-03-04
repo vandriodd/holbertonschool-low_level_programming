@@ -86,3 +86,6 @@ void print_chessboard(char (*a)[8]);
 
 /* Task 7 - The line of life is ragged diagonal between duty and desire */
 void print_diagsums(int *a, int size);
+
+/* Task 8 - Double pointer, double fun */
+void set_string(char **s, char *to);
