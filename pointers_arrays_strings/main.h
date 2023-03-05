@@ -61,6 +61,9 @@ char *cap_string(char *);
 /* Task 7 - Mozart composed his music not for the elite, but for everybody */
 char *leet(char *c);
 
+/* Task 8 - rot13 */
+char *rot13(char *s);
+
 /* >> 3rd Project << */
 
 /* Task 0 - memset */
