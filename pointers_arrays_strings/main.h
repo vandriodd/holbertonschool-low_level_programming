@@ -64,6 +64,9 @@ char *leet(char *c);
 /* Task 8 - rot13 */
 char *rot13(char *s);
 
+/* Task 9 - Numbers have life; they're not just symbols on paper */
+void print_number(int n);
+
 /* >> 3rd Project << */
 
 /* Task 0 - memset */
