@@ -20,6 +20,8 @@ int _pow_recursion(int x, int y);
 /* Task 5 - Your subconscious is looking for the dreamer */
 int _sqrt_recursion(int n);
 
+int _sqrt_supp(int n, int i); /* helper */
+
 /* Task 6 - Inception. Is it possible? */
 int is_prime_number(int n);
 
