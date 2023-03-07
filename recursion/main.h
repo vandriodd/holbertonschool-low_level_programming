@@ -22,3 +22,5 @@ int _sqrt_recursion(int n);
 
 /* Task 6 - Inception. Is it possible? */
 int is_prime_number(int n);
+
+int supp(int n, int i); /* helper */
