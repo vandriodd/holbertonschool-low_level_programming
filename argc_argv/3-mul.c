@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3) /* if argc doesn't contains both numbers */
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	else
