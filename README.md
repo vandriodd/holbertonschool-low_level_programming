@@ -38,6 +38,8 @@ They are specified in each project.
 4. [makefiles](./makefiles)
 5. [more_functions_nested_loops](./more_functions_nested_loops)
 6. [pointers_arrays_strings](./pointers_arrays_strings)
+7. [more_pointers_arrays_strings](./pointers_arrays_strings/more_pointers_arrays_strings)
+8. [even_more_pointers_arrays_strings](./pointers_arrays_strings/even_more_pointers_arrays_strings)
 9. [recursion](./recursion)
 10. [static_libraries](./static_libraries)
 11. [argc_argv](./argc_argv)
