@@ -35,6 +35,12 @@ They are specified in each project.
 1. [hello_world](./hello_world)
 2. [variables_if_else_while](./variables_if_else_while)
 3. [functions_nested_loops](./functions_nested_loops)
+4. [makefiles](./makefiles)
+5. [more_functions_nested_loops](./more_functions_nested_loops)
+6. [pointers_arrays_strings](./pointers_arrays_strings)
+9. [recursion](./recursion)
+10. [static_libraries](./static_libraries)
+11. [argc_argv](./argc_argv)
 
 ## Credits
-Collaborators are acknowledged within each project
+Collaborators are acknowledged within each project.
