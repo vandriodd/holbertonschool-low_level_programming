@@ -12,10 +12,10 @@ char *create_array(unsigned int size, char c)
 	unsigned int i; /* iterator */
 	char *arr; /* pointer to arr */
 
-	if (!size) /* if isn't a valid size to allocate */
+	if (!size) /* if isn't a valid size to allocate mem */
 		return (NULL);
 
-	/* size required for allocates the data */
+	/* size required for allocate mem */
 	arr = malloc(sizeof(char) * size);
 
 	if (!arr)
