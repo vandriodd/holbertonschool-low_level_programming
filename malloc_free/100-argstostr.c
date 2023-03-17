@@ -25,10 +25,9 @@ char *argstostr(int ac, char **av)
 
 	if (len < 0) /* avoid fishy value */
 		return (NULL);
-	else
-		len += (ac + 1); /* add bytes to be occupied by \n and \0 */
 
-	newStr = malloc(sizeof(char) * len); /* mem alloc for the str */
+	len += (ac + 1); /* add bytes to be occupied by \n and \0 */
+	newStr = malloc(sizeof(char) * len);
 
 	/* case of failure */
 	if (!newStr)
