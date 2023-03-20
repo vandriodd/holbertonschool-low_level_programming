@@ -1,6 +1,10 @@
 #ifndef DOG_H
 #define DOG_H
 
+/* Libraries */
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * struct dog - characteristics of the dog
  * @name: name of the dog
