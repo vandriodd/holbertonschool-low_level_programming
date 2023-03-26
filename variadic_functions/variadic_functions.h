@@ -3,7 +3,19 @@
 
 /* Libraries */
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
+
+/**
+ * struct formats - struct to print any type of variable
+ * @c: variable format (% in printf)
+ * @f: func pointer that points to the function corresponding to the var format
+ */
+typedef struct formats
+{
+	char c;
+	void (*f)(va_list args);
+} format_t;
 
 /* Prototypes */
 int _putchar(char c);
