@@ -34,11 +34,14 @@ void print_float(va_list args)
 void print_string(va_list args)
 {
 	char *s;
-	
+
 	s = va_arg(args, char *);
 
 	if (!s)
+	{
 		printf("(nil)");
+		return;
+	}
 	printf("%s", s);
 }
 
