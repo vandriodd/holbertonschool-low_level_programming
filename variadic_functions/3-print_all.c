@@ -34,14 +34,11 @@ void print_float(va_list args)
 void print_string(va_list args)
 {
 	char *s;
-
+	
 	s = va_arg(args, char *);
 
 	if (!s)
-	{
 		printf("(nil)");
-		return;
-	}
 	printf("%s", s);
 }
 
@@ -53,33 +50,33 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0, n = 0;
-	char *ptr = "";
+	char *ptr = ""; /* separator */
 
 	format_t form[] = {
-		{'c', print_char},
-		{'i', print_integer},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL},
+		{"c", print_char},
+		{"i", print_integer},
+		{"f", print_float},
+		{"s", print_string},
+		{NULL, NULL}
 	}; /* sets the valid formats */
 
 	va_start(args, format);
 
-	while (format[n] && !(!format))
+	while (format[n] && format)
 	{
+		i = 0;
 		while (i < 4)
 		{
 			/* if the format passed is valid */
 			/* (matches those in the form[])*/
-			if (format[n] == form[i].c)
+			if (form[i].c[0] == format[n])
 			{
 				printf("%s", ptr);
-				form[i].f(args);
 				ptr = ", ";
+				form[i].f(args);
 			}
 			i++;
 		}
-		i = 0;
 		n++;
 	}
 	printf("\n");
