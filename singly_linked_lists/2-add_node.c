@@ -1,6 +1,5 @@
 #include "lists.h"
 
-
 /**
  * _strlen - determines the length of string
  * @str: string input
