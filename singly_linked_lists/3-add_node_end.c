@@ -40,7 +40,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!*head)
 	{
 		*head = newNode;
-		return (NULL);
+		return (newNode);
 	}
 
 	/* else, go through the list to the end */
@@ -49,5 +49,5 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	lastNode->next = newNode;
 
-	return (*head);
+	return (newNode);
 }
