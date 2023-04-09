@@ -2,7 +2,7 @@
 
 /**
  * set_bit - sets value of a bit to 1 at a given index
- * @n:
+ * @n: input number
  * @index: given index
  *
  * Return: 1 if success,
