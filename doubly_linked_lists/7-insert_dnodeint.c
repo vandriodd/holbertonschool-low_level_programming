@@ -14,34 +14,39 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *node = NULL, *tmp = *h;
 	unsigned int i = 1;
 
+	node = malloc(sizeof(dlistint_t));
+	if (!node)
+		return (NULL);
+
+	node->n = n; /* stores data */
+
+	if (idx == 0)
+	{
+		node = add_dnodeint(h, n); /* adds the node to the beginning */
+		return (node);
+	}
+
+	while (i < idx && tmp) /* otherwise, traverse the list to the index */
+	{
+		tmp = tmp->next;
+		i++;
+	}
+
 	if (!tmp)
 		return (NULL);
 
-	if (idx == 0) /* adds the node at beginning */
-		node = add_dnodeint(h, n);
-	else
+	if (!tmp->next)
 	{
-		while (i < idx && tmp) /* otherwise, traverse the list to the index */
-		{
-			tmp = tmp->next;
-			i++;
-		}
-
-		if (tmp->next == NULL)
-			node = add_dnodeint_end(h, n);
-		else
-		{
-			node = malloc(sizeof(dlistint_t));
-			if (!node)
-				return (NULL);
-
-			node->n = n;
-			node->next = tmp->next; /* both next positions of the ptrs are linked */
-			node->prev = tmp;
-			tmp->next = node;
-			node->next->prev = node; /* next node points to the new node */
-		}
+		node = add_dnodeint_end(h, n); /* adds the node at the end */
+		return (node);
 	}
+
+	node->next = tmp->next; /* both next positions of the ptrs are linked */
+	node->prev = tmp;
+	tmp->next = node;
+
+	if (node->next)
+		node->next->prev = node; /* next node points to the new node */
 
 	return (node);
 }
