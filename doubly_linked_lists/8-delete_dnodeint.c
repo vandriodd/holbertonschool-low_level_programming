@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_first - deletes a first node of a list
+ * delete_dnodeint_first - deletes the first node of a list
  * @head: pointer to address of first node
  *
- * Return: address
+ * Return: 1 if success, -1 if not
  */
 int delete_dnodeint_first(dlistint_t **head)
 {
@@ -33,19 +33,20 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *node = *head;
 	unsigned int i = 0;
 
-	if (!head || !(*head))
+	if (!head)
 		return (-1);
 
 	if (index == 0) /* if it is the first node */
-	{
 		return (delete_dnodeint_first(head));
-	}
 
 	while (i < index && node)
 	{
 		node = node->next;
 		i++;
 	}
+
+	if (i != index)
+		return (-1);
 
 	if (!node->next) /* if it is the last node */
 	{
