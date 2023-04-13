@@ -10,13 +10,14 @@
 void error_manager(char **argv, int fd, int status)
 {
 	if (status == 97)
-		dprintf(2, "Usage: cp file_from file_to\n"), exit(status);
+		dprintf(2, "Usage: cp file_from file_to\n");
 	else if (status == 98)
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(status);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 	else if (status == 99)
-		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(status);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 	else if (status == 100)
-		dprintf(2, "Error: Can't close fd %d\n", fd), exit(status);
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+	exit(status);
 }
 
 /**
@@ -47,9 +48,9 @@ int  o_fileto(char *filename, char **argv)
 {
 	int file;
 
-	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0666);
+	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file == -1)
-		error_manager(argv, 0, 98);
+		error_manager(argv, 0, 99);
 	return (file);
 }
 
