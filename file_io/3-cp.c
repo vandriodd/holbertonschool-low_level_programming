@@ -47,7 +47,7 @@ int  o_fileto(char *filename, char **argv)
 {
 	int file;
 
-	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0666);
 	if (file == -1)
 		error_manager(argv, 0, 98);
 	return (file);
@@ -63,7 +63,7 @@ int  o_fileto(char *filename, char **argv)
 int main(int argc, char **argv)
 {
 	int file_from = o_filefrom(argv[1], argv), file_to = o_fileto(argv[2], argv);
-	ssize_t wr, rd;
+	int wr, rd;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 		if (rd == -1)
 			error_manager(argv, 0, 98);
 
-		wr = write(file_to, buffer, 1024);
+		wr = write(file_to, buffer, rd);
 		if (wr == -1)
 			error_manager(argv, 0, 99);
 	}
