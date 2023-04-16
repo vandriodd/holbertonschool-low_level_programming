@@ -10,13 +10,13 @@
 void error_manager(char **argv, int fd, int status)
 {
 	if (status == 97)
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	else if (status == 98)
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 	else if (status == 99)
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 	else if (status == 100)
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(status);
 }
 
@@ -44,7 +44,7 @@ int o_filefrom(char *filename, char **argv)
  *
  * Return: file on success, exit status on failure
  */
-int  o_fileto(char *filename, char **argv)
+int o_fileto(char *filename, char **argv)
 {
 	int file;
 
@@ -63,12 +63,14 @@ int  o_fileto(char *filename, char **argv)
  */
 int main(int argc, char **argv)
 {
-	int file_from = o_filefrom(argv[1], argv), file_to = o_fileto(argv[2], argv);
-	int wr, rd;
+	int file_from, file_to, wr, rd;
 	char buffer[1024];
 
 	if (argc != 3)
 		error_manager(argv, 0, 97);
+
+	file_from = o_filefrom(argv[1], argv);
+	file_to = o_fileto(argv[2], argv);
 
 	while ((rd = read(file_from, buffer, 1024)))
 	{
