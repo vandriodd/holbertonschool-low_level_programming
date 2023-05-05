@@ -43,6 +43,17 @@ They are specified in each project.
 9. [recursion](./recursion)
 10. [static_libraries](./static_libraries)
 11. [argc_argv](./argc_argv)
+12. [malloc_free](./malloc_free)
+13. [more_malloc_free](./more_malloc_free)
+14. [preprocessor](./preprocessor)
+15. [structures_typedef](./structures_typedef)
+16. [function_pointers](./function_pointers)
+17. [variadic_functions](./variadic_functions)
+18. [singly_linked_lists](./singly_linked_lists)
+19. [doubly_linked_lists](./doubly_linked_lists)
+20. [bit_manipulation](./bit_manipulation)
+21. [file_io](./file_io)
+22. [hash_tables](./hash_tables)
 
 ## Credits
 Collaborators are acknowledged within each project.
